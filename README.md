@@ -9,3 +9,11 @@ The only object type you can't convert to excel is the `timeperiod` object since
 
 every row in the excel defines an entire object as described in the [nagios definition pages](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/3/en/objectdefinitions.html)
 
+An example of how commands are configured in excel. This tab is called  config file in excel looks like this:
+![alt text][excel-cmd]
+
+`xls2nag.py` will generate from this sheet called `commands`:
+
+[excel-cmd]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/excel-cmd.png "excel cmd"
+
+[nagios-cmd-cfg]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/nagios-cmd-cfg.png "nagios command configuration"
