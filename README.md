@@ -18,6 +18,13 @@ An example of how commands are configured in excel. This sheet is called `comman
 
 In this case, my 83 lines command sheet convert into 546 lines of nagios configuration file, and this is quite ok because there are only a few directives in these objects. For comparison, my 336 lines of services converts to a 2227 line sequencial config file. The advantage of the excel is that you have a way better overview and can edit multiple objects at the same time.
 
+Here is a comparable example of some service templates i defined in excel (for clarity i hid some of the columns):
+![alt text][excel-svc]
+
+and what the generated nagios configuration looks like.
+![alt text][nagios-svc-cfg]
 
 [excel-cmd]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/excel-cmd.png "excel cmd"
 [nagios-cmd-cfg]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/nagios-cmd-cfg.png "nagios command configuration"
+[excel-svc]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/excel-svc.png "excel services"
+[nagios-svc-cfg]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/nagios-svc-cfg.png "nagios service configuration"
