@@ -12,9 +12,12 @@ every row in the excel defines an entire object as described in the [nagios defi
 An example of how commands are configured in excel. This sheet is called `commands` in excel looks like this:
 ![alt text][excel-cmd]
 
-`xls2nag.py` will generate the config file `commands.cfg` from this sheet and will look like this:
+`xls2nag.py` will generate the config file from each sheet. This file is called `commands.cfg` and will look like this:
 ![alt text][nagios-cmd-cfg]
 
-[excel-cmd]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/excel-cmd.png "excel cmd"
 
+In this case, my 83 lines command sheet convert into 546 lines of nagios configuration file, and this is quite ok because there are only a few directives in these objects. For comparison, my 336 lines of services converts to a 2227 line sequencial config file. The advantage of the excel is that you have a way better overview and can edit multiple objects at the same time.
+
+
+[excel-cmd]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/excel-cmd.png "excel cmd"
 [nagios-cmd-cfg]: https://github.com/on1dds/Excel-to-Nagios-config/raw/main/screenshots/nagios-cmd-cfg.png "nagios command configuration"
