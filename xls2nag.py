@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 #################################################################
 ## Author: Joachim Elen
 ## Date: 2022-06-25
 ## 
 ## Purpose: Convert Excel file to Nagios Core config files
 ## License: GNU GPLv2
-##
 #################################################################
-
 import sys
 import xlrd
 import time
@@ -33,14 +31,14 @@ with xlrd.open_workbook(fname) as wb:
             f.write ("#######################################################\n")
             f.write ("#  Nagios configuration file\n")
             f.write ("#  Generated from: " + fname + ", tab " + sheet_name + "\n")
-            f.write (time.strftime("#  by Nagen on %Y-%m-%d %H:%M")+ "\n")
+            f.write (time.strftime("#  by xls2nag.py on %Y-%m-%d %H:%M")+ "\n")
             f.write ("#######################################################\n\n")
 
             sheet = wb.sheet_by_name(sheet_name)
             header = sheet.row(0)
             for row_index in range(1, sheet.nrows):
                 col  = sheet.row(row_index)
-                if len(col) > 1:
+                if col.count > 1:
                     if len((str(col[0].value))) > 0 and (str(col[0].value))[:1] != "#":
                         f.write ("# " + str(col[0].value) + " " + str(col[1].value) + "\n")
                         #if str(col[0].value) == "service":
